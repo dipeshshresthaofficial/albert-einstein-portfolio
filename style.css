@@ -126,6 +126,7 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     color: var(--primary-color);
+    padding: 10px 5px;
 }
 
 nav > #nav-items >img{
@@ -140,6 +141,7 @@ nav > #nav-items >img{
 
 #nav-menus{
     width: 70%;
+    /* display: block; */
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -159,6 +161,18 @@ nav ul li a{
     text-decoration: none;
 
 }
+#nav-menus li a{
+    transition: 0.3s ease-in;
+}
+
+#nav-menus li a:visited, #nav-menus li a:active{
+    color: var(--primary-color)
+}
+
+#nav-menus li a:hover{
+    border-bottom: 3px solid var(--primary-color);
+   
+}
 
 /* ------------------------- Landing Section ------------------------- */
 
@@ -172,7 +186,7 @@ nav ul li a{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
+    margin: 60px auto;
 }
 
 #landing-desc{
@@ -217,12 +231,12 @@ nav ul li a{
 
 #landing-img-1{
     position: absolute;
-    left: 0px;
+    left: -20px;
 }
 
 #landing-img-2{
     position: absolute;
-    right: -10px;
+    right: -30px;
     top: -35px;
 }
 
@@ -390,6 +404,7 @@ h1{
     /* background-color: palegoldenrod; */
     grid-area: blog-sec;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 #blog-cont{
@@ -475,6 +490,9 @@ footer a{
         margin-top: 80px;
     }
 
+    #exp-sec ul, #hobbies-sec ul{
+        margin: 0;
+    }
     /* --------------------- Navigation Bar -------------------- */
     nav>#nav-items >label{
         
@@ -508,20 +526,44 @@ footer a{
         text-align: center;
     }
 
-    #nav-menus li a{
-        transition: 0.3s ease-in;
-    }
-
-    #nav-menus li a:visited, #nav-menus li a:active{
-        color: var(--primary-color)
-    }
     
-    #nav-menus li a:hover{
-        border-bottom: 3px solid var(--primary-color);
-       
+
+    /* ------------------------ Landing Section ------------------- */
+    #landing-sec{
+        width: 100%;
+    }
+    #landing-sec h2{
+        font-size: 1.8em;
     }
 
+    #landing-desc{
+        padding: 0 90px;
+    }
 
+    #landing-img-cont{
+        width: 290px;
+        height: 290px;
+    }
+
+    /* ------------------------- Bio Section --------------------- */
+
+    #bio-sec > .diagonal-cont{
+        height: 600px;
+    }
+    #bio-cont{
+        margin-top: 100px;
+    }
+
+    #bio-desc{
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    /* ------------------------- Research Section ----------------- */
+    #research-cont{
+        
+        width: 300px;
+    }
 
     /* ------------ Experience Section -------------------------- */
     #exp-sec{
@@ -532,7 +574,12 @@ footer a{
         top: 60px;
     }
 
+    
+
     /* ------------------------ Blog Section -------------------- */
+    #blog-sec{
+        margin-bottom: 10px;
+    }
     #blog-cont{
         justify-content: space-between;
     }
@@ -540,4 +587,33 @@ footer a{
     #blog-cont article{
         margin-top: 35px;
     }
+    
+
+    
 }
+
+@media only screen and (max-width: 500px){
+
+     /* ------------------------ Landing Section ------------------- */
+     
+    #landing-desc{
+        padding: 0;
+    }
+    /* ------------------------- Bio Section --------------------- */
+
+    #bio-sec > .diagonal-cont{
+        height: 920px;
+    }
+    footer{
+        font-size: 14px;
+    }
+    footer a{
+        font-size: 16px;
+    }
+}
+
+/* 
+@media only screen and (max-width: 500px) and (min-width: 350px) {
+
+    
+} */
