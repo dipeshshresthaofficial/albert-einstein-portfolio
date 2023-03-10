@@ -13,6 +13,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     
     font-family: var(--primary-font-family);
@@ -116,7 +120,7 @@ section h1{
 
 nav{
     
-    height: 60px;
+    min-height: 60px;
     grid-area: nav;
     display: flex;
     flex-direction: row;
@@ -124,13 +128,17 @@ nav{
     color: var(--primary-color);
 }
 
-nav img{
+nav > #nav-items >img{
     height: 50px;
     margin: auto 20px;
     /* width: 20%; */
 }
 
-nav ul{
+#hamburguer-btn{
+    display: none;
+}
+
+#nav-menus{
     width: 70%;
     display: flex;
     flex-direction: row;
@@ -145,6 +153,11 @@ nav ul li{
     font-weight: 600;
     font-size: 20px;
     font-family: var(--secondary-font-family);
+}
+
+nav ul li a{
+    text-decoration: none;
+
 }
 
 /* ------------------------- Landing Section ------------------------- */
@@ -461,6 +474,54 @@ footer a{
     #landing-right{
         margin-top: 80px;
     }
+
+    /* --------------------- Navigation Bar -------------------- */
+    nav>#nav-items >label{
+        
+        margin: 0 10px;
+    }
+
+    #hamburguer-btn{
+        display: block;
+    }
+
+    #nav-items{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav>#nav-items>input{
+        /* display: none; */
+    }
+    nav > #nav-items > label >img{
+        height: 40px;
+    }
+    nav>#nav-items>label{
+        cursor: pointer;
+    }
+    
+    #nav-menus{
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    #nav-menus li a{
+        transition: 0.3s ease-in;
+    }
+
+    #nav-menus li a:visited, #nav-menus li a:active{
+        color: var(--primary-color)
+    }
+    
+    #nav-menus li a:hover{
+        border-bottom: 3px solid var(--primary-color);
+       
+    }
+
+
 
     /* ------------ Experience Section -------------------------- */
     #exp-sec{

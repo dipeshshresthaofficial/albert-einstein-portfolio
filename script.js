@@ -1,3 +1,12 @@
+function toggleMenus(){
+    const navMenus = document.querySelector('#nav-menus');
+    if(window.getComputedStyle(navMenus).display === 'none'){
+        navMenus.style.display = 'block';
+        document.querySelector('#nav').style.display='block'
+    }else{
+        navMenus.style.display = 'none';
+    }
+}
 var JSONstr;
 fetch('https://upadhayay.github.io/db.json')
   .then(
@@ -54,3 +63,4 @@ fetch('https://upadhayay.github.io/db.json')
   .catch(function(err) {
     console.log('Fetch Error :-S', err);
   });
+
