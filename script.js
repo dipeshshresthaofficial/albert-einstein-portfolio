@@ -1,3 +1,4 @@
+
 function toggleMenus(){
     const navMenus = document.querySelector('#nav-menus');
     if(window.getComputedStyle(navMenus).display === 'none'){

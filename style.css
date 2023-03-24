@@ -139,6 +139,7 @@ nav > #nav-items >img{
     display: none;
 }
 
+
 #nav-menus{
     width: 70%;
     /* display: block; */
@@ -602,7 +603,7 @@ footer a{
     /* ------------------------- Bio Section --------------------- */
 
     #bio-sec > .diagonal-cont{
-        height: 920px;
+        height: 890px;
     }
     footer{
         font-size: 14px;
